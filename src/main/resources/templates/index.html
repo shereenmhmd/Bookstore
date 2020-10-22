@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace = "layouts::header"> </head>
+<body>
+	<div class="page-top" style="width: 100%; height: 20px; background-color: #f46b42;"></div>
+	<nav th:replace = "layouts::navbar"></nav>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="panel panel-default">
+	    		<div class="panel-body">
+					<div th:replace = "layouts::main-carousel">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4">
+			<img th:src="@{/image/logo.png}">
+		</div>
+
+	</div><!--end row-->
+
+	<hr>
+	
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+	    		<div class="panel-body">
+					<img th:src="@{/image/bestseller.png}" class="img-responsive">
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+	    		<div class="panel-body">
+					<img th:src="@{/image/hours.png}" class="img-responsive">
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+	    		<div class="panel-body">
+					<img th:src="@{/image/faq.png}" class="img-responsive">
+				</div>
+			</div>
+		</div>
+		
+	</div><!--end row-->
+	
+	<div class="">
+		<div class="home-headline">
+			<span>Featured Books</span>
+			<hr style="margin-top:-15px">
+		<div>
+	</div> <!--end of row-->
+	
+	
+	<div class="row">
+		<div th:replace = "layouts::featured-carousel">
+		</div>
+	</div><!--end of row-->
+</div><!--end container-->
+
+<div th:replace = "layouts::body-bottom-scripts"></div>
+</body>
+</html>
